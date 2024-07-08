@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分数输入页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        select, input[type="number"], button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>分数输入页面</h1>
+    
+    <form id="scoreForm">
+        <label for="stesen">选择Stesen:</label>
+        <select id="stesen" name="stesen">
+            <option value="1">Stesen 1</option>
+            <option value="2">Stesen 2</option>
+            <option value="3">Stesen 3</option>
+            <option value="4">Stesen 4</option>
+            <option value="5">Stesen 5</option>
+        </select>
+        
+        <label for="kumpulan">选择Kumpulan:</label>
+        <select id="kumpulan" name="kumpulan">
+            <option value="1">Kumpulan 1</option>
+            <option value="2">Kumpulan 2</option>
+            <option value="3">Kumpulan 3</option>
+            <option value="4">Kumpulan 4</option>
+            <option value="5">Kumpulan 5</option>
+            <option value="6">Kumpulan 6</option>
+            <option value="7">Kumpulan 7</option>
+            <option value="8">Kumpulan 8</option>
+            <option value="9">Kumpulan 9</option>
+            <option value="10">Kumpulan 10</option>
+            <option value="11">Kumpulan 11</option>
+            <option value="12">Kumpulan 12</option>
+            <option value="13">Kumpulan 13</option>
+            <option value="14">Kumpulan 14</option>
+            <option value="15">Kumpulan 15</option>
+            <option value="16">Kumpulan 16</option>
+            <option value="17">Kumpulan 17</option>
+            <option value="18">Kumpulan 18</option>
+            <option value="19">Kumpulan 19</option>
+            <option value="20">Kumpulan 20</option>
+        </select>
+        
+        <label for="markah">输入Markah:</label>
+        <input type="number" id="markah" name="markah" min="0" max="100">
+        
+        <button type="submit">提交</button>
+    </form>
+
+    <script>
+        document.getElementById('scoreForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // 防止表单提交
+
+            const stesen = document.getElementById('stesen').value;
+            const kumpulan = document.getElementById('kumpulan').value;
+            const markah = document.getElementById('markah').value;
+
+            console.log(`Stesen: ${stesen}, Kumpulan: ${kumpulan}, Markah: ${markah}`);
+            // 你可以在这里添加你的提交逻辑
+            alert(`Stesen: ${stesen}, Kumpulan: ${kumpulan}, Markah: ${markah}`);
+        });
+    </script>
+</body>
+</html>
